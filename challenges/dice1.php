@@ -1,6 +1,6 @@
 <?php
 /**
- * Challenge 002
+ * Dice 1
  *
  * Schrijf een nieuw PHP script 'uitdaging2.php' die een dobbelsteen met een
  * willekeurig getal toont tussen 1 en 6.

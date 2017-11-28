@@ -1,7 +1,6 @@
 <?php
-
 /**
- * Challenge 007
+ * Validate Characters
  *
  * Zorg dat in onderstaande functie alleen de karakters a-z en A-Z worden
  * toegelaten.

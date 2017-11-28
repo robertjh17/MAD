@@ -1,8 +1,8 @@
 <?php
 /**
- * Challenge 005
+ * SummerHollidays
  *
- * Maak een PHP script uitdaging5.php. Dit script laat zien hoeveel avonden
+ * Maak een nieuw PHP script. Dit script laat zien hoeveel avonden
  * jullie nog kunnen oefenen met programmeren voordat de zomervakantie
  * begint.
  *

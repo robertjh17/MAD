@@ -1,8 +1,8 @@
 <?php
 /**
- * Challenge 003
+ * Dice 2
  *
- * Maak een PHP script uitdaging3.php.
+ * Maak een nieuw PHP script.
  *
  * - dit script laat een 'rollen' knop zien
  * - dit script laat een tekstinvoerveld zien

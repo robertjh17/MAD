@@ -1,6 +1,6 @@
 <?php
 /**
- * Challenge 008
+ * Decypher
  */
 
 function decypher($encrypted)

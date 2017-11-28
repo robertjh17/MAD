@@ -1,9 +1,11 @@
 <?php
 /**
- * Challenge 006
+ * Validate Email
+ *
+ * Vul de volgende functie aan met code om te controleren of er een geldig
+ * e-mail adres is meegegeven
  */
 
-// Vul de volgende functie aan met code om emailadressen te valideren.
 function validateEmail($email)
 {
     // Onder deze regel komt jouw code

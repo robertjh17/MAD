@@ -1,8 +1,8 @@
 <?php
 /**
- * Challenge 001
+ * Calculate Circle
  *
- * Plak onderstaande PHP code in een nieuw script 'uitdaging1.php'
+ * Plak onderstaande PHP code in een nieuw script.
  *
  * Maak in de code de missende functie calculateCircle die je als argument /
  * parameter de straal ('radius') van een cirkel mee kunt geven. De functie
