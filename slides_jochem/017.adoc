@@ -23,7 +23,7 @@ Zoek uit:
 * Waarom is een MD5 hash niet veilig genoeg?
 
 == opdracht
-Los challenges 008 en 009 op
+Los challenges "decyper" en "validate_password" op
 
 Zie https://git.newdeveloper.nl/jkossen/app17-2017-2018
 
