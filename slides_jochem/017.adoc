@@ -8,17 +8,23 @@
 * Je weet hoe je een password valideert
 * Je beseft dat je passwords moet versleutelen
 
-[%notitle]
+[%notitle,background-color=black]
 == encryptie
 image::img/encryption.jpg[background,size=contain]
 
+[%notitle,background-color=black]
+== encryptie
+image::img/code_talkers.png[background,size=contain]
+
 == encryptie of hash?
 Zoek uit:
+
 * Wat is het verschil tussen versleuteling en hashes?
-* Wat
-* Waarom is MD5 niet veilig genoeg?
+* Waarom is een MD5 hash niet veilig genoeg?
 
 == opdracht
 Los challenges 008 en 009 op
 
 Zie https://git.newdeveloper.nl/jkossen/app17-2017-2018
+
+Als je dat klaar hebt, lees dan dit door: https://www.howtogeek.com/howto/33949/htg-explains-what-is-encryption-and-how-does-it-work/
