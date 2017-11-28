@@ -1,0 +1,92 @@
+# PHP herhaling
+Arjan Timmerman<artimmerman@landstede.nl>
+:source-highlighter: coderay
+:pdf-page-size: A4
+:revealjs_theme: serif
+:setanchors: true
+:revealjs_history: true
+
+## Doelen vorige les
+- Student kan benoemen wat een browser sessie is
+- Student kan benoemen kan een voorbeeld voor een sessie noemen
+- Student kan een sessie starten in PHP
+
+
+## Doelen vorige les
+- Student kan een programma maken met if / else
+- Student kan een programma maken met get
+- Student kan een programma maken met sessions
+
+## Onderwerpen
+- Variablen / datatypes
+- If / else
+- Get parameter
+- Include / require
+
+## PHP variabelen
+Begint altijd met $;
+[[src-listing]]
+[source,php]
+----
+<?php
+$declaratie = 'waarde';
+?>
+----
+
+## IF / ELSE
+Begint altijd met $;
+[[src-listing]]
+[source,php]
+----
+<?php
+
+if ( $var >= 60  ){
+    echo "Passed";
+} else if($var >= 55){
+    echo "Barely Passed";
+} else{
+    echo "Failed";
+}
+?>
+----
+
+## In een url?
+http://localhost/index.php?page=new&id=8&naam=Erwin
+[[src-listing]]
+[source,php]
+----
+<?php
+echo $_GET['page'];
+echo $_GET['id'];
+echo $_GET['naam'];
+?>
+----
+## SESSION
+
+Ophalen of opvragen van sessie gegevens.
+Array van data. Staat in een super global
+In PHP:
+[[src-listing]]
+[source,php]
+----
+$_SESSION[‘login’];
+----
+
+http://php.net/manual/en/reserved.variables.session.php
+
+
+## Functies
+Starten van een session, meestal aan het begin van  een programma.
+[[src-listing]]
+[source,php]
+----
+session_start();
+----
+
+## Opdracht?
+Bedenk wat je zou willen maken voor je portfolio site in PHP.
+Schrijf dit op in 5 a 10 zinnen.  - 15 minuten
+Overleg mag.
+
+
+

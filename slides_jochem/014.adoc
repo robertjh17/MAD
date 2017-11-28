@@ -1,0 +1,66 @@
+= Les 014
+:source-highlighter: coderay
+:revealjs_theme: serif
+
+[transition=zoom, %notitle]
+== Doelen
+* Je bent in staat zelf een functie met argumenten en return te schrijven
+* Je houdt rekening met foutieve input en scriptkiddies
+* Je bent beter in staat fouten in code te spotten
+
+== functions, hoe zat het ook alweer?
+
+== Code van de vorige keer
+[source,php]
+----
+<?php
+function get_content()
+{
+  $page = 'home';
+
+  if (array_key_exists('page', $_GET)) {
+    $page = $_GET['page'];
+  }
+
+  $filepath = 'pages/' . $page . '.php';
+
+  if (file_exists($filepath)) {
+    require_once($filepath);
+  } else {
+    echo "<h1>ERROR: page not found</h1>";
+  }
+}
+?>
+----
+
+[%notitle]
+== Scriptkiddies
+image::img/scriptkiddie.jpg[background]
+
+== Cross Site Scripting (XSS)
+
+== Bedenk
+
+Wat is een goede manier om dit te filteren?
+
+== Zoek uit
+
+* Hoe pas je dit toe?
+
+== opdracht 1/2
+* Pas get_content aan zodat die _GET filtert
+* Doorloop de code van je portfolio. Wordt al je input gefilterd?
+
+== (blijft staan) opdracht van vorige les
+
+Maak een PHP functie die je een lijst met getallen mee kunt geven.
+De functie geeft een associative (met keys) array terug met:
+
+* sum (som van de getallen)
+* average (gemiddelde)
+* min (laagste getal)
+* max
+
+== (blijft staan) opdracht van vorige les
+
+Schrijf een recursieve functie om de inhoud van $_GET of $_POST op het scherm te tonen. De functie roept zichzelf aan op het moment dat ie een (sub-)array tegenkomt (bijvoorbeeld bij checkboxes).

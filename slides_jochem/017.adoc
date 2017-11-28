@@ -1,0 +1,16 @@
+= Les 017
+:source-highlighter: coderay
+:revealjs_theme: serif
+:revealjs_history: true
+
+== Lesdoelen
+* Je hebt basiskennis van encryptie
+* Je weet het verschil tussen encryptie en hashing
+* Je kunt PHP functies schrijven die gebruik maken van encryptie
+
+[%notitle]
+== encryptie
+image::img/encryption.jpg[background,size=contain]
+
+
+== encryptie of hash?

@@ -1,0 +1,59 @@
+= Les 010
+:source-highlighter: coderay
+:revealjs_theme: serif
+
+== Vandaag
+
+* Checkboxes en formulieren
+* print_r
+* loops
+
+== checkboxes
+[%step]
+* *name* van checkboxes eindigt op []
+* in PHP: *array*
+* als niet aangevinkt: niet meegestuurd
+
+
+== Wat is $_GET?
+== Welk datatype heeft $_GET?
+
+== PHP: print_r / var_dump
+
+[source,php]
+----
+<?php
+  print_r($_GET);
+
+  var_dump($_GET);
+----
+
+
+== print_r($_GET)
+
+[source,php]
+----
+Array
+(
+    [name] => Jochem
+    [age] => 37
+)
+----
+
+
+
+----
+Voor elke waarde in $_GET:
+    toon waarde op het scherm
+----
+
+
+== Pas je formulier aan
+* print je waarden op het scherm middels `<pre>` en `print_r` en `var_dump`
+* Gebruik daarna foreach om alle waarden op het scherm te tonen
+* Zoek uit wat je met for kunt in plaats van foreach
+
+
+== Extra
+* Gebruik daarna bootstrap om je formulier mooi te maken:
+* https://getbootstrap.com/docs/4.0/components/forms/

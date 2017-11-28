@@ -1,0 +1,165 @@
+= Les 013
+:source-highlighter: coderay
+:revealjs_theme: serif
+
+[transition=zoom, %notitle]
+== Vandaag
+* Je begrijpt hoe HTTP werkt
+* Je leert een aantal (nieuwe) begrippen
+* Oefenen met de belangrijkste (?) bouwsteen: functies
+
+== HTTP
+
+== HTTP Request/Response
+
+```
+client: request
+
+server: response headers
+
+server: response body
+```
+
+== HTTP Request/Response
+
+```
+client: GET /index.php HTTP/1.1
+client: Host: www.landstede.net
+client: User-Agent: Mozilla/1. ... (Macintosh, )
+
+server: HTTP/1.1 200 OK
+server: Date: Sun, 05 Nov 2017, 13:49:21 GMT
+server: Content-Type: text/html; charset=utf-8
+server: Content-Length: 23781
+server: Last-Modified: Sat, 04 Nov 2017 10:41:49 GMT
+
+server: <!DOCTYPE html>
+server: <html>
+server: ...
+```
+
+== Ga op zoek
+* Wat is DNS?
+* Wat zijn TCP poorten?
+
+== API
+=== Application Programming Interface
+Een verzameling gedocumenteerde functies waarmee verschillende computerprogramma's met elkaar kunnen communiceren.
+
+Tegenwoordig zijn de meeste API's *RESTful*
+
+== HTTP Methods
+
+Denk aan je formulier en het HTTP request
+
+|===
+|Methode |Beschrijving
+
+|GET
+|Read (uhhh... ?)
+
+|POST
+|Create (uhhh... ?)
+|===
+
+== REST
+Representational State Transfer
+
+|===
+|Methode |Beschrijving
+
+|GET
+|Read
+
+|POST
+|Create
+
+|PUT
+|Update/Replace
+
+|PATCH
+|Update/Modify
+
+|DELETE
+|Delete
+|===
+
+== Over functies
+
+Waarom noem ik dit de belangrijkste bouwsteen?
+
+////
+Stel je voor dat je een huis moet bouwen. Hoe moeilijk is dat? Hoe moeilijk is het zonder bakstenen en dakpannen?
+////
+
+
+== echo vs return
+
+[source,php]
+----
+function getToetsCijfer() {
+  echo "6";
+}
+----
+
+[source,php]
+----
+function getToetsCijfer() {
+  return 6;
+}
+----
+
+== return
+
+[source,php]
+----
+function getToetsCijfer() {
+  return 6;
+}
+
+$cijfer = getToetsCijfer();
+pushToAverages($cijfer);
+----
+
+== Zoek uit: wat wordt er op het scherm getoond en waarom?
+
+[source,php]
+----
+<?php
+
+$cijfer = 6;
+
+function resetCijfer()
+{
+  $cijfer = 10;
+}
+
+resetCijfer();
+
+echo "$cijfer\n";
+----
+
+=== Antwoord
+
+6, Scope
+
+
+== opdracht van de vorige keer
+
+Maak een PHP script met html code die in de <body> alleen maar de functie `get_content()` aanroept.
+
+Schrijf de functie get_content() die een pagina uit $_GET haalt en het bijbehorende bestand (waarin alleen body content staat) inlaadt.
+
+== opdracht 1/2
+
+Maak een PHP functie die je een lijst met getallen mee kunt geven.
+De functie geeft een associative (met keys) array terug met:
+
+* sum (som van de getallen)
+* average (gemiddelde)
+* min (laagste getal)
+* max
+
+== opdracht 2/2
+
+Schrijf een recursieve functie om de inhoud van $_GET of $_POST op het scherm te tonen. De functie roept zichzelf aan op het moment dat ie een (sub-)array tegenkomt (bijvoorbeeld bij checkboxes).

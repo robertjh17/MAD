@@ -1,0 +1,117 @@
+= Les 011
+:source-highlighter: coderay
+:revealjs_theme: serif
+:setanchors: true
+:revealjs_history: true
+
+[transition=zoom, %notitle]
+== Vandaag
+* Variabelen, datatypen
+* loops: for, foreach en while
+* nested loops
+
+== Wat is een variabele?
+
+== Wat is een variabele?
+
+____
+container om een waarde in op te slaan
+____
+
+[%notitle]
+== Wat is een variabele?
+image::img/variables.png[background, size=contain]
+
+[transition=zoom, %notitle]
+== Welke datatypen ken je?
+
+[%step]
+* String
+* Integer
+* Float
+* Boolean
+* Array
+
+== Welke datatypen ken je?
+
+* String: "tekst"
+* Integer: 1537
+* Float: 1.245
+* Boolean: Yes/No, True/False, 0/1
+* Array: [1, 2, 3, 4, 5]
+
+[transition=zoom, %notitle]
+== Opdracht van vorige keer
+* print je waarden op het scherm middels `<pre>` en `print_r` en `var_dump`
+* Gebruik daarna foreach om alle waarden op het scherm te tonen
+* Zoek uit wat je met for kunt in plaats van foreach
+
+== Oplossing voor vorige opdracht
+[source,php]
+----
+<pre>
+<?php
+print_r($_GET);
+
+echo "\n\n\n"; // drie lege regels
+
+foreach ($_GET as $key => $val) {
+  echo "$key=$val\n"; // \n is het karakter voor een nieuwe regel
+}
+----
+
+== Zoek uit
+
+Hoe werkt `for` in plaats van foreach?
+Hoe werkt `while` in plaats van foreach/for?
+
+== for
+
+[source,php]
+----
+<?php
+$lijst = [1, 238, 43, 2536, 12, 238, 99];
+
+for ($i=0; $i<count($lijst); $i++)
+{
+  echo $lijst[$i] . "\n";
+}
+?>
+----
+
+== Zoek uit
+
+Met welke PHP functie kun je het datatype van een variabele achterhalen?
+
+== Opdracht
+
+Schrijf de code om alle key en value paren van $_GET inclusief checkboxes op het scherm te tonen.
+
+
+== Zoek uit
+
+1. Hoe bepaal je de lengte van een Array?
+2. Met welke PHP functie krijg je een nieuwe array terug met alleen de keys van de meegegeven array?
+
+
+== Opdracht
+
+Schrijf code om een nieuwe array te maken met alleen de keys van $_GET
+
+
+== Opdracht
+
+Schrijf de pseudocode om een willekeurige array met integers numeriek te sorteren.
+
+bijv: [8438, 321, 38290, 321, 89, 1, 192, 449]
+
+Maak code om deze array te sorteren. Je mag enkel gebruik maken van if statements en vergelijkingsoperators als: <, <=, > en >=
+
+Dus niet van bestaande PHP functies als sort()
+
+Tip: maak een nieuwe array aan en doe daar de waarden op volgorde in.
+
+
+== Opdracht voor de maestro's
+
+Schrijf de code om de voorgaande pseudocode te implementeren in PHP

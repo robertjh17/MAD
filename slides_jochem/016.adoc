@@ -1,0 +1,44 @@
+= Les 016
+:source-highlighter: coderay
+:revealjs_theme: serif
+:revealjs_history: true
+
+== functie: definitie
+
+[source,php]
+----
+<?php
+function getRecentPosts($number_of_posts = 10)
+{
+  global $dbh;
+
+  $sql = 'SELECT * FROM posts ORDER BY created_at DESC LIMIT :limit';
+  $sth = $dbh->prepare($sql);
+  $sth->execute(['limit' => $number_of_posts]);
+
+  return $sth->fetchAll();
+}
+----
+
+== functie: aanroep
+
+[source,php]
+----
+<?php
+$recent_posts = getRecentPosts(5);
+----
+
+[%notitle]
+== agile
+
+image::img/agile-smb.png[background, size=contain]
+
+== use cases voor blog
+[%step]
+* wie, wat, waarom: user stories
+* user story: Als <wie> wil ik <wat> zodat ik <waarom>
+* NIET: hoe
+
+== opdracht
+* Maak een lijst van user stories op basis van je use cases
+* Maak een lijst van *PHP functies* die je nodig hebt om je user stories te implementeren

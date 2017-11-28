@@ -1,0 +1,79 @@
+# PHP Functions
+Arjan Timmerman<artimmerman@landstede.nl>
+:source-highlighter: coderay
+:pdf-page-size: A4
+:revealjs_theme: serif
+:setanchors: true
+:revealjs_history: true
+:imagedir: ./image
+
+[transition=zoom]
+## Doelen vorige les
+- Student kan een programma maken met if / else
+- Student kan een programma maken met get
+- Student kan een programma maken met sessions
+
+## Doelen les
+- Student kan benoemen wat een functie is
+- Student kan het verschil tussen het defineren van een functie en aanroepen herkennen
+- Student kan de syntax van een functie schrijven
+
+## Pokemon
+image::pokemon.jpg[background]
+
+
+## Definiëren van een functie
+[background-color="yellow"]
+
+
+Geeft dit iets weer ?
+
+[[src-listing]]
+[source,php]
+----
+<?php
+
+function throwPokeball($pokemon){
+    return 'I choose you, '. $pokemon;
+}
+
+?>
+----
+
+[.step]
+- Nee
+
+## Aanroepen van een functie
+Wat zal dit weer geven ?
+[source,php]
+----
+<?php
+$pokemon = 'Raichu';
+function throwPokeball($pokemon){
+    return 'I choose you, '. $pokemon;
+}
+
+echo throwPokeball('Pikachu');
+echo throwPokeball($pokemon);
+throwPokeball('Grimer');
+
+?>
+----
+
+## Uitkomst
+[%hardbreaks]
+I choose you, Pikachu
+I choose you, Raichu
+
+
+## Opdracht
+[%hardbreaks]
+Welke functies kun je voor Login systeem in PHP bedenken?
+Denk in functionaliteit alleen, ook weergeven van html!
+Gaan we zo bespreken!
+zie
+https://git.newdeveloper.nl/jkossen/app17-2017-2018-p1/blob/master/login-php.adoc
+
+
+
+

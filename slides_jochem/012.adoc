@@ -1,0 +1,137 @@
+= Les 012
+:source-highlighter: coderay
+:revealjs_theme: serif
+
+[transition=zoom, %notitle]
+== Vandaag
+* Arrays
+* loops: for, while
+* code voor hergebruik schrijven
+
+[transition=zoom, %notitle]
+== Opdracht van vorige keer
+
+Schrijf de pseudocode om een willekeurige array met integers numeriek te sorteren.
+
+bijv: [8438, 321, 38290, 321, 89, 1, 192, 449]
+
+[%notitle]
+== Oplossing
+
+----
+Gegeven lijst is [8438, 321, 38290, 321, 89, 1, 192, 449]:
+lengte is aantal items in lijst
+
+Voor i = 0 tot lengte:
+  pos = i
+  Voor j = i + 1 tot lengte:
+    Als lijst[j] < lijst[pos]:
+      pos = j
+
+  tmp = lijst[i]
+  lijst[i] = lijst[pos]
+  lijst[pos] = tmp
+
+----
+
+== Opdracht 2 van vorige keer
+Schrijf de PHP code om de pseudocode te implementeren.
+Je mag geen gebruik maken van bestaande PHP sorteerfuncties als sort().
+
+Het is dus nodig om een for/foreach/while loop te implementeren en gebruik te maken van vergelijkingsoperators als: <, \<=, > en >=
+
+[%notitle]
+== Oplossing
+
+[source,php]
+----
+<?php
+
+$list=[8438, 321, 38290, 321, 89, 1, 192, 449];
+$length = count($list);
+
+for ($i=0; $i<$length; $i++) {
+  $pos = $i;
+  for ($j=$i+1; $j<$length; $j++) {
+    if ($list[$j] < $list[$pos]) {
+      $pos = $j;
+    }
+  }
+
+  $tmp = $list[$i];
+  $list[$i] = $list[$pos];
+  $list[$pos] = $tmp;
+
+}
+----
+
+== !
+
+Wat doet ! in een if? bijv:
+
+[source,php]
+----
+if (! $found) {
+  echo "wat is er nu gebeurd?\n";
+}
+----
+
+== while
+
+== while
+
+[source,php]
+----
+<?php
+  $list=[8438, 321, 38290, 321, 89, 1, 192, 449];
+  $search = 89;
+  $found = false;
+
+  $pos = 0;
+  while (! $found && $pos < count($list)) {
+    if ($list[$pos] === $search) {
+      echo "$search gevonden op positie $pos\n";
+      $found = true;
+    }
+
+    $pos++;
+  }
+----
+
+== hmm
+
+Zou het niet handig zijn als we deze code voor elke lijst konden gebruiken?
+
+== functions
+
+[source,php]
+----
+function do_something($arg1, $arg2, ...)
+{
+    echo "ik doe iets met $arg1 en $arg2\n";
+}
+
+do_something('argument1', 'argument2');
+----
+
+== opdracht
+
+Herschrijf de code om een array te sorteren naar een functie, en roep hem aan.
+
+== opdracht
+
+Maak een PHP script met html code die in de <body> alleen maar de functie `get_content()` aanroept.
+
+Schrijf de functie get_content() die een pagina uit $_GET haalt en het bijbehorende bestand (waarin alleen body content staat) inlaadt.
+
+== opdracht
+
+Ga door je portfolio heen. Waar kun je nog meer functies gebruiken?
+
+* Maak een lijst
+* Implementeer de functies
+
+== eventueel
+
+PHP Comparison Operators
+https://secure.php.net/manual/en/language.operators.comparison.php
