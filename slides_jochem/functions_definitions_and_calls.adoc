@@ -1,4 +1,4 @@
-= Les 016
+= Functies: definitie en aanroep
 :source-highlighter: coderay
 :revealjs_theme: serif
 :revealjs_history: true

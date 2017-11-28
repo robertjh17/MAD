@@ -1,4 +1,4 @@
-= Les 011
+= Variabelen en Datatypen
 :source-highlighter: coderay
 :revealjs_theme: serif
 :setanchors: true

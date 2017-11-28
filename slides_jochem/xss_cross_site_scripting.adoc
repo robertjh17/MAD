@@ -1,4 +1,4 @@
-= Les 014
+= XSS / Cross Site Scripting
 :source-highlighter: coderay
 :revealjs_theme: serif
 
@@ -47,7 +47,7 @@ Wat is een goede manier om dit te filteren?
 
 * Hoe pas je dit toe?
 
-== opdracht 1/2
+== opdracht
 * Pas get_content aan zodat die _GET filtert
 * Doorloop de code van je portfolio. Wordt al je input gefilterd?
 

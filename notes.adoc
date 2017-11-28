@@ -443,3 +443,18 @@ function get_content()
 </html>
 
 ----
+
+==== Input valideren
+
+TODO: filter_var, filter_input
+
+==== Encryptie en Hashing
+
+Zie ook:
+
+* https://www.howtogeek.com/howto/33949/htg-explains-what-is-encryption-and-how-does-it-work/
+
+PHP functies:
+
+* password_hash
+* password_verify
