@@ -1,0 +1,51 @@
+= XSS voorkomen: filter_var
+:source-highlighter: coderay
+:revealjs_theme: serif
+
+[transition=zoom, %notitle]
+== Doelen
+* Je houdt rekening met foutieve input en scriptkiddies
+* Je weet filter_var te vinden
+
+== Voorbeeld
+
+[source,php]
+----
+<?php
+$int = 100;
+
+if (!filter_var($int, FILTER_VALIDATE_INT) === false) {
+  echo("Integer is valid");
+} else {
+  echo("Not a valid integer");
+}
+----
+
+== Informatie
+https://www.w3schools.com/php/php_filter.asp
+https://www.w3schools.com/php/php_filter_advanced.asp
+
+== get_content
+[source,php]
+----
+<?php
+function get_content()
+{
+  $page = 'home';
+
+  if (array_key_exists('page', $_GET)) {
+    $page = $_GET['page'];
+  }
+
+  $filepath = 'pages/' . $page . '.php';
+
+  if (file_exists($filepath)) {
+    require_once($filepath);
+  } else {
+    echo "<h1>ERROR: page not found</h1>";
+  }
+}
+----
+
+== opdracht
+Pas de code van get_content aan zodat die input filtert
