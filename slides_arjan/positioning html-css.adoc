@@ -1,0 +1,33 @@
+= HTML / CSS
+Arjan Timmerman <artimmerman@landstede.nl>
+:source-highlighter: coderay
+:pdf-page-size: A4
+:toc:
+:toclevels: 3
+
+[transition=zoom]
+## Doelen vorige les
+- Student kan een switch case in php schrijven.
+- Student kan benoemen wanneer switch case moet gebruiken.
+
+## Doelen
+- Student kan een div positioneren
+- Student kan het verschil tussen den verschillende positions beschrijven
+
+## Static positioning
+De standaard positioning van een block element
+Plaats het elemente op de standaard locatie
+
+## Relative positioning
+Relatieve positionering van een block element.
+Plaats het element relatief van normale positie op de pagina.
+
+## Absolute positioning
+Absolute positionering van een block element ten opzicht van een parent.
+Gebruik dit zo weinig mogelijk!!!!
+
+## Fixed positioning
+Lijkt op Absolute positionering van een block element.
+Plaats het element op basis van de viewport van de pagina.
+
+## Opdracht

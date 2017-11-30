@@ -1,0 +1,54 @@
+= PHP Variable functions / Router
+Arjan Timmerman <artimmerman@landstede.nl>
+:source-highlighter: coderay
+:pdf-page-size: A4
+:revealjs_theme: serif
+:setanchors: true
+:revealjs_history: true
+:imagedir: ./image
+
+[transition=zoom]
+## Doelen vorige les
+- Student kan een switch case in php schrijven.
+- Student kan benoemen wanneer switch case moet gebruiken.
+
+## Doelen
+- Student kan benoemen wat een variable functie is
+- Student kan benoemen wat het doel van een router is
+- Student kan de syntax van een variable functie aanroep schrijven
+
+## Router
+Wat is een router ?
+Groepen van 4 a 5 - 20 min daarna na bespreken
+
+## Variable functies
+Wat is nu eigenlijk nu het meest voorkomende variable data.
+
+## Variable functies(2)
+[[src-listing]]
+[source,php]
+----
+<?php
+$function = $_GET['function];
+$function();
+?>
+----
+
+## defines / consts
+Waardes die meerdere malen gebruikt worden maar nooit wijzigen.
+[[src-listing]]
+[source,php]
+----
+<?php
+define("DB","blog_db");
+echo DB;
+?>
+----
+
+## Opdracht
+- Maak een router function!
+- Include automatische op basis van de get variable 'page' het bestand met de juiste functies.
+- Roep een functie automatische aan op basis van de get variable 'function'
+- Dit allemaal vanuit alleen index.php.
+- Let op het opschonen van de get variablen, mag alleen alphanumerice tekens bevatten.
+

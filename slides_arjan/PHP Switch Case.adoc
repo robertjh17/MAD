@@ -1,0 +1,67 @@
+= PHP Switch Case
+Arjan Timmermam <artimmerman@landstede.nl>
+:source-highlighter: coderay
+:pdf-page-size: A4
+:revealjs_theme: serif
+:setanchors: true
+:revealjs_history: true
+:imagedir: ./image
+
+[transition=zoom]
+## Doelen vorige les
+- Student kan benoemen wat een functie is
+- Student kan het verschil tussen het defineren van een functie en aanroepen herkennen
+- Student kan de syntax van een functie schrijven
+
+
+## Functies laten zien ?
+
+
+## Doelen
+- Student kan een switch case in php schrijven.
+- Student kan benoemen wanneer switch case moet gebruiken.
+
+## Switch / case
+
+[[src-listing]]
+[source,php]
+----
+<?php
+
+switch($_GET['function']){
+    case 'login':
+        login();
+        break;
+    case 'geen':
+          geen();
+          break;
+    case 'pokemon':
+             pokemon();
+    default:
+        echo 'geen functie opgegeven';
+}
+?>
+----
+## Switch / case 2
+
+[[src-listing]]
+[source,php]
+----
+<?php
+$jaar = 1990;
+switch(true){
+    case ($jaar <2000):
+            echo "voor 2000";
+        break;
+
+    default:
+        echo 'geen functie opgegeven';
+}
+?>
+----
+
+## Opdracht
+
+Maak een switch case functie welke aan de hand van de functie date laat zien of het ochtend/middag/avond/nacht is.
+Zorg dat op 13:37 er 1337 oftewel "leet" op het scherm wordt getoond.
+
