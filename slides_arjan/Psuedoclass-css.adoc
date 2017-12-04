@@ -1,0 +1,101 @@
+= Css selectors
+Arjan Timmerman <artimmerman@landstede.nl>
+:source-highlighter: coderay
+:pdf-page-size: A4
+:toc:
+:toclevels: 3
+:setanchors: true
+:revealjs_history: true
+:revealjs_theme: blood
+:imagedir: ./image
+
+## html tree
+image::HTMLDOMTree.png[test]
+
+## CSS Selectors / combinators " "
+[source,css]
+----
+
+ /* Alle a in een div ook verder in de boom */
+ div a {
+    color: green;
+ }
+
+----
+
+[source,html]
+----
+<div class="notred>hoi
+    <a href="" class="red">hoi2</a> <!-- word rood -->
+        <p>
+            <a href="" class="test">hoi1</a> <!-- word rood -->
+        </p>
+    </a>
+</div>
+----
+
+## CSS Selectors / combinators ">"
+
+[[src-listing2]]
+[source,css]
+----
+
+ /* Alle a in een div ook verder in de boom */
+ div > a{
+    color: green;
+ }
+----
+
+[source,html]
+----
+<div class="notred>hoi
+    <a href="" class="red">hoi2</a> <!-- word rood -->
+        <p>
+            <a href="" class="test">hoi1</a> <!-- word niet rood -->
+        </p>
+    </a>
+</div>
+----
+
+## CSS Selectors / combinators ","
+
+"," selection van meerdere selectors
+[[src-listing4]]
+[source,css]
+----
+.red, .notred{
+    background-color: red;
+}
+----
+
+[source,html]
+----
+<div class="notred>hoi</div>
+<a href="" class="red">hoi2</a> <!-- word rood -->
+<a href="" class="test">hoi1</a> <!-- niet rood -->
+----
+## CSS Selectors / combinators "+"
+"+" alleen het eerst element
+
+[[src-listing4]]
+[source,css]
+----
+.notred + a {
+    background-color: red;
+}
+----
+
+[source,html]
+----
+<div class="notred>hoi</div>
+<a href="">hoi2</a> <!-- word rood -->
+<a href="">hoi2</a> <!-- niet rood -->
+----
+
+## Opdracht
+We gaan oefenen met CSS selectors , HTML staat al op de git
+
+- Maak het ul.menu op als een top menu.
+- Waarbij alle eerste elementen onder de ul naast elkaar zweven.
+- Zorg dat het er uit ziet als blokken naast elkaar,
+- toon de lijst onder articles alleen als de muis eroverheen gaat(:hover).
