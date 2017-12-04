@@ -1,0 +1,73 @@
+= Arrays
+:source-highlighter: coderay
+:revealjs_theme: serif
+
+[transition=zoom, %notitle]
+== Doelen
+* Je weet wat een array is
+* Je weet wat een indexed array is
+* Je weet wat een associative array is
+
+== Array
+
+[%step]
+* Lijst
+
+== Array
+
+[source,php]
+----
+$my_list = [1, 'a', 'zwolle', 3.14];
+----
+
+== Keys en Values
+
+* Wat is een key?
+* Wat is een value?
+
+== Indexed Array
+
+== Indexed Array
+
+[source,php]
+----
+$my_list = [
+  0 => 1,
+  1 => 'a',
+  2 => 'zwolle',
+  3 => 3.14
+];
+----
+
+== Associative array
+
+== Associative array
+
+[source,php]
+----
+$my_list = [
+  'groep' => 1,
+  'aanduiding' => 'a',
+  'woonplaats' => 'zwolle',
+  'gemiddeld' => 3.14
+];
+----
+
+== Multidimensional array
+
+== Multidimensional array
+
+[source,php]
+----
+$my_list = [
+  'groepen' => [1, 8, 2489],
+  'aanduiding' => 'a'
+  'woonplaats' => 'zwolle',
+  'gemiddeld' => 3.14,
+  'cijfers' => [
+    'gemiddeld' => 3.14,
+    'max' => 8,
+    'min' => 1.3
+  ]
+];
+----
