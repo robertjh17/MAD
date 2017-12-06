@@ -9,6 +9,14 @@ Arjan Timmerman <artimmerman@landstede.nl>
 :revealjs_theme: blood
 :imagedir: ./image
 
+
+## Doelen vorige les
+- Student kan de grote lijnen van de opmaak zien
+
+## Doelen les
+- Student kan verschillende CSS selectors benoemen
+-
+
 ## html tree
 image::HTMLDOMTree.png[test]
 
@@ -49,9 +57,9 @@ image::HTMLDOMTree.png[test]
 [source,html]
 ----
 <div class="notred>hoi
-    <a href="" class="red">hoi2</a> <!-- word rood -->
+    <a href="" class="red">hoi2</a> <!-- word groen -->
         <p>
-            <a href="" class="test">hoi1</a> <!-- word niet rood -->
+            <a href="" class="test">hoi1</a> <!-- word niet groen -->
         </p>
     </a>
 </div>
@@ -70,7 +78,7 @@ image::HTMLDOMTree.png[test]
 
 [source,html]
 ----
-<div class="notred>hoi</div>
+<div class="notred>hoi</div> <!-- word rood -->
 <a href="" class="red">hoi2</a> <!-- word rood -->
 <a href="" class="test">hoi1</a> <!-- niet rood -->
 ----
