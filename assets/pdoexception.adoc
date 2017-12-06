@@ -1,0 +1,101 @@
+= PDOException in PHP
+Michael Geurtse <mgeurtse@student.landstede.nl>
+:source-highlighter: coderay
+:pdf-page-size: A4
+:toc: left
+:toclevels: 3
+:icons: font
+
+== Hoe los je de error: "Fatal error: Uncaught PDOException: could not find driver" op?
+
+Wanneer je er niet uitkomt stel je vraag gerust aan Michael, andere medestudenten en/of een leraar, hij kan je dan helpen met het probleem.
+Als je het niet snapt heeft niets doen geen zin, er is altijd wel iemand die je kan helpen of je kan even wat anders nuttigs doen tijdens het wachten.
+
+Veel succes!!
+
+.  Start PHPStorm op, ga naar de navigatiemenu boven in het venster van PHP en klik op File -> Settings.
+
+.  In het venster Settings zie je links een menu. Dubbelklik op Languages & Frameworks en je ziet dan PHP er vlak onder staan. Dubbelklik hier op.
+
+.  Bovenaan is een optie CLI Interpreter met een ingestelde PHP-versie. Klik op de ... knop.
++
+In het venster die wordt geopend (CLI Interpreters) staat "PHP executable". Stel hier de locatie van php.exe in. Klik op de ... knop.
++
+Selecteer het bestand php.exe (ook al staat dit al ingestled) en klik op "OK" en daarna op de blauwe ronde pijltjes.
+
+.  In het venster staat tussen "General" en "Additional" de locatie van het php.ini bestand vermeld.
++
+Staat het "php.ini" bestand niet goed vermeld? Onderaan deze uitleg staat een korte uitgelegd om dit op te lossen. Los dat nu eerst op en ga dan verder met deze stap.
++
+Klik op "Open in Editor" en klik daarna op "Apply" en op "OK". Klik ook in het andere venster op "Apply" en dan op "OK".
+
+.  Druk op Ctrl+F en typ extension_dir in. In één van de twee selecties staat: +
++
+[source]
+----
+;extension_dir = "ext"
+----
++
+Verwijder de ; en sla het bestand op.
+
+.  We gaan nu de Built-in Web Server instellen. Klik op het groene driehoekje (in PHPStorm rechtsboven) en klik daarna op "Edit Configurations..." deze opent in nieuw venster.
+
+.  Klik linksboven op het groene plusje. Klik in het lijstje op PHP Built-in Web Server. Stel bij Name een logische naam in. Bij Host vul je localhost in en wijzig van Port 80 naar 8080.
+    Bij Document root klik je op de ... knop en selecteer je de hoofdfolder van je project en klik op "OK".
+    Klik onderaan op "Apply" en daarna op "OK". Start PHPStorm helemaal opnieuw op.
+
+. Klik op de groene driehoekje rechtsboven in PHPStorm. Open je webbrowser. Typ in de URL-balk het volgende: localhost:8080/
+    Achter de slash typ je als het bestand in een subfolder staat eerst de naam van de subfolder in en dan slash met daarachter de bestandsnaam.
++
+.Voorbeelden
+----
+    localhost:8080/php/testfile.php
+    localhost:8080/testfile.php
+    localhost:8080/php/test/testfile.php
+    Druk daarna op enter.
+----
+
+. Als alles goed is gelukt dan is de error opgelost. Refresh de pagina voor de zekerheid met Ctrl + F5. Soms werkt het dan pas omdat je dan de cache ook refreshed.
+
+== Hoe krijg je het "php.ini" bestand?
+
+.  Open verkenner en navigeer naar de map waar je PHP hebt geïnstalleerd.
+
+.  In de map "PHP" staan wat bestanden. Zoek het bestand "php.ini".
++
+Heb je deze niet? Zoek het bestand *php.ini-development*.
++
+Kopieer dit bestand naar *php.ini*
++
+IMPORTANT: LET OP! Zorg ervoor dat je de EXTENSIE wijzigt. Dit is belangrijk anders wordt het driver probleem niet opgelost.
++
+----
+     php.ini.ini  -> FOUT!
+     phpini.ini   -> FOUT!
+     php.ini      -> GOED!
+----
+
+.  Je krijgt nu een melding dat het bestand mogelijk beschadigd raakt. Negeer dit en klik op "OK".
++
+In de map PHP moeten tussen de andere bestanden de php.ini en php.ini-production bestanden staan.
+
+.  Open nu het bestand php.ini met kladblok.
++
+Ga naar Bewerken -> Zoeken (Ctrl+F)
+
+.  Typ in het invoerbalk het volgende in: extension_dir en klik op "Volgende zoeken".
+
+.  Als het goed is kom je bij de regel uit waar het volgende staat: ;extension_dir = "ext"
++
+Haal de ; weg voor deze regel en sla het bestand op.
+
+. Als je alle stappen hebt gevolgd is dit nu klaar en kan je verder met de uitleg voor het oplossen van het "could not find driver" probleem.
+
+== Tot slot
+Deze oplossing is mede mogelijk gemaakt door de goede hulp van de docent A. Timmerman.
+
+Bedankt hiervoor!
+
+De stappenplan is mede mogelijk gemaakt door de student M. Geurtse.
+
+Dit is met uiterste zorg en plezier gemaakt.
