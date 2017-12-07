@@ -39,7 +39,13 @@ function getHighScores($game = null, $player = null)
     return $rows;
 }
 
-$scores = getHighScores('cs:go');
+$game = null;
 
-echo "<pre>";
-print_r($scores);
+
+if (isset($_GET['game'])) {
+    $game = $_GET['game'];
+}
+
+$scores = getHighScores($game);
+
+echo json_encode($scores);
