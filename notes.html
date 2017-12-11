@@ -1119,6 +1119,18 @@ kun je verkorten tot:
 </div>
 <div class="sect4">
 <h5 id="_pagina_laden_op_basis_van_get">pagina laden op basis van $_GET</h5>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Let op, de volgende code werkt, maar is nog niet volledig. Het zorgt ervoor dat er XSS (Cross Site Scripting) mogelijk is op je pagina.
+</td>
+</tr>
+</table>
+</div>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="php"><span class="inline-delimiter">&lt;?php</span>
@@ -1157,8 +1169,64 @@ kun je verkorten tot:
 </div>
 <div class="sect3">
 <h4 id="_input_valideren">Input valideren</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://secure.php.net/filter_var" class="bare">https://secure.php.net/filter_var</a></p>
+</li>
+<li>
+<p><a href="https://secure.php.net/filter_input" class="bare">https://secure.php.net/filter_input</a></p>
+</li>
+<li>
+<p><a href="https://secure.php.net/manual/en/function.ctype-alnum.php" class="bare">https://secure.php.net/manual/en/function.ctype-alnum.php</a></p>
+</li>
+</ul>
+</div>
 <div class="paragraph">
-<p>TODO: filter_var, filter_input</p>
+<p>Om veiligheidsredenen en om vervuiling van je data(base) te voorkomen is het noodzakelijk om alle gebruikersinput (formulieren, <code>$_GET</code>, <code>$_POST</code> waarden, etc.) te filteren en te valideren.</p>
+</div>
+<div class="paragraph">
+<p>Doe je dit niet, dan krijg je al heel snel een lek in je code waardoor een aanvaller misbruik kan maken van je code en er onverwachte acties mee kan uitvoeren.</p>
+</div>
+<div class="paragraph">
+<p>Om een voorbeeld te geven, als je een formulier hebt waarin iemand zijn leeftijd op moet geven, dien je ook te controleren en te garanderen dat de gebruiker alleen maar een getal tussen bijvoorbeeld <code>5</code> en <code>110</code> kan opgeven.</p>
+</div>
+<div class="paragraph">
+<p>PHP biedt middels de functies <code>filter_var</code> en <code>filter_input</code> de nodige functionaliteit om de meeste input te filteren en te valideren.</p>
+</div>
+<div class="paragraph">
+<p>Bijvoorbeeld, om een e-mail adres te valideren:</p>
+</div>
+<div class="listingblock">
+<div class="title">filter_var</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="php"><span class="inline-delimiter">&lt;?php</span>
+<span class="comment">// voorbeeld van filter_var</span>
+<span class="local-variable">$email</span> = filter_var(<span class="string"><span class="delimiter">'</span><span class="content">e.toeps@personeel.landstede.nl</span><span class="delimiter">'</span></span>, <span class="constant">FILTER_VALIDATE_EMAIL</span>);
+
+<span class="keyword">if</span> (<span class="local-variable">$email</span>) {
+  <span class="predefined">echo</span> <span class="string"><span class="delimiter">&quot;</span><span class="content">Ja, dit is een geldig e-mail adres</span><span class="delimiter">&quot;</span></span>;
+} <span class="keyword">else</span> {
+  <span class="predefined">echo</span> <span class="string"><span class="delimiter">&quot;</span><span class="content">Nee, dit is geen geldig e-mail adres</span><span class="delimiter">&quot;</span></span>;
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">filter_input</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="php"><span class="inline-delimiter">&lt;?php</span>
+<span class="comment">// valideer $_GET['email']</span>
+<span class="local-variable">$email</span> = filter_input(<span class="constant">INPUT_GET</span>, <span class="string"><span class="delimiter">'</span><span class="content">email</span><span class="delimiter">'</span></span>, <span class="constant">FILTER_VALIDATE_EMAIL</span>);
+
+<span class="keyword">if</span> (<span class="local-variable">$email</span>) {
+    <span class="predefined">echo</span> <span class="string"><span class="delimiter">&quot;</span><span class="content">Ja, dit is een geldig e-mail adres</span><span class="delimiter">&quot;</span></span>;
+} <span class="keyword">else</span> {
+    <span class="predefined">echo</span> <span class="string"><span class="delimiter">&quot;</span><span class="content">Nee, dit is geen geldig e-mail adres</span><span class="delimiter">&quot;</span></span>;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Als je een functie à la <code>get_content()</code> gebruikt waarbij de op te vragen pagina in $_GET opgegeven kan worden, is het verstandig om bijvoorbeeld alleen de karakters <code>a t/m z</code> en eventueel <code>0 t/m 9</code> toe te staan. Dit kan middels de methode <code>ctype_alnum</code>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1179,10 +1247,10 @@ kun je verkorten tot:
 <div class="ulist">
 <ul>
 <li>
-<p>password_hash</p>
+<p><code>password_hash</code></p>
 </li>
 <li>
-<p>password_verify</p>
+<p><code>password_verify</code></p>
 </li>
 </ul>
 </div>
@@ -1193,7 +1261,7 @@ kun je verkorten tot:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-11-28 21:33:37 CET
+Last updated 2017-12-11 14:06:39 CET
 </div>
 </div>
 </body>

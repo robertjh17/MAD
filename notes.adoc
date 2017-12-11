@@ -409,6 +409,9 @@ echo getFibonacciAsApiCall();
 
 ===== pagina laden op basis van $_GET
 
+[IMPORTANT]
+Let op, de volgende code werkt, maar is nog niet volledig. Het zorgt ervoor dat er XSS (Cross Site Scripting) mogelijk is op je pagina.
+
 [source,php]
 ----
 <?php
@@ -446,7 +449,50 @@ function get_content()
 
 ==== Input valideren
 
-TODO: filter_var, filter_input
+* https://secure.php.net/filter_var
+* https://secure.php.net/filter_input
+* https://secure.php.net/manual/en/function.ctype-alnum.php
+
+Om veiligheidsredenen en om vervuiling van je data(base) te voorkomen is het noodzakelijk om alle gebruikersinput (formulieren, `$_GET`, `$_POST` waarden, etc.) te filteren en te valideren.
+
+Doe je dit niet, dan krijg je al heel snel een lek in je code waardoor een aanvaller misbruik kan maken van je code en er onverwachte acties mee kan uitvoeren.
+
+Om een voorbeeld te geven, als je een formulier hebt waarin iemand zijn leeftijd op moet geven, dien je ook te controleren en te garanderen dat de gebruiker alleen maar een getal tussen bijvoorbeeld `5` en `110` kan opgeven.
+
+PHP biedt middels de functies `filter_var` en `filter_input` de nodige functionaliteit om de meeste input te filteren en te valideren.
+
+Bijvoorbeeld, om een e-mail adres te valideren:
+
+.filter_var
+[source,php]
+----
+<?php
+// voorbeeld van filter_var
+$email = filter_var('e.toeps@personeel.landstede.nl', FILTER_VALIDATE_EMAIL);
+
+if ($email) {
+  echo "Ja, dit is een geldig e-mail adres";
+} else {
+  echo "Nee, dit is geen geldig e-mail adres";
+}
+----
+
+.filter_input
+[source,php]
+----
+<?php
+// valideer $_GET['email']
+$email = filter_input(INPUT_GET, 'email', FILTER_VALIDATE_EMAIL);
+
+if ($email) {
+    echo "Ja, dit is een geldig e-mail adres";
+} else {
+    echo "Nee, dit is geen geldig e-mail adres";
+}
+----
+
+Als je een functie à la `get_content()` gebruikt waarbij de op te vragen pagina in $_GET opgegeven kan worden, is het verstandig om bijvoorbeeld alleen de karakters `a t/m z` en eventueel `0 t/m 9` toe te staan. Dit kan middels de methode `ctype_alnum`.
+
 
 ==== Encryptie en Hashing
 
@@ -456,5 +502,5 @@ Zie ook:
 
 PHP functies:
 
-* password_hash
-* password_verify
+* `password_hash`
+* `password_verify`
