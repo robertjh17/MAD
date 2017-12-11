@@ -11,9 +11,54 @@ function getDb()
 
     return $dbh;
 }
+/*
+ * create
+ * read -> index en show
+ * update
+ * delete
+ *
+ * CRUD
+ */
 
 
-function getHighScores($game = null, $player = null)
+function create($game = null, $player = null, $score = null) {
+    $dbh = getDb();
+    $sql  = 'INSERT INTO highscores SET game = :game, player = :player, score = :score';
+    $sqlparams = [];
+
+    if ($game !== null) {
+        $sqlparams['game'] = $game;
+    }
+
+    if ($player !== null) {
+        $sqlparams['player'] = $player;
+    }
+
+    if ($score !== null) {
+        $sqlparams['score'] = $score;
+    }
+
+
+    print_r($sqlparams);
+    $sth = $dbh->prepare($sql);
+    $sth->execute($sqlparams);
+
+    print_r($sth->errorInfo());
+}
+
+function show() {
+
+}
+
+function update() {
+
+}
+
+function delete() {
+
+}
+
+function index($game = null, $player = null)
 {
     $dbh = getDb();
     $sql = 'SELECT * FROM highscores WHERE 1 = 1';
@@ -30,8 +75,6 @@ function getHighScores($game = null, $player = null)
     }
 
     $sth = $dbh->prepare($sql);
-
-
     $sth->execute($sqlparams);
 
     $rows = $sth->fetchAll();
@@ -46,6 +89,6 @@ if (isset($_GET['game'])) {
     $game = $_GET['game'];
 }
 
-$scores = getHighScores($game);
+$scores = index($game);
 
 echo json_encode($scores);
