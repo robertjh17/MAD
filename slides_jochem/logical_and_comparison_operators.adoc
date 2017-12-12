@@ -1,0 +1,84 @@
+= Operators: comparison en logical
+:source-highlighter: coderay
+:revealjs_theme: serif
+:revealjs_history: true
+
+== Lesdoelen
+* Je weet wat comparison en logical operators zijn
+* Je weet welke comparison en logical er zijn en wat ze doen
+* Je bent in staat in elke situatie de juiste comparison operator te kiezen
+
+[%notitle]
+== Operator
+image::img/operator.jpg[background,size=contain]
+
+== Wat is een operator?
+
+[%step]
+* Symbool om een specifieke actie op de argumenten te omschrijven
+* Gebruikt om veelvuldig gebruikte acties op een korte manier te schrijven
+* Bijvoorbeeld: `>=` in: `if ($age >= 18) { ... }`
+
+== Vergelijkingsoperators
+
+[cols="2"]
+|===
+
+| ==
+| !=
+
+| ===
+| !==
+
+| !=
+| <>
+
+| <
+| +<=+
+
+| >
+| >=
+
+| +<=>+ (sinds PHP7)
+| ?? (sinds PHP7)
+
+|===
+
+== Logical operators
+
+[cols="2"]
+|===
+
+| and
+| &&
+
+| or
+| \|\|
+
+| xor
+|
+
+| !
+|
+
+|===
+
+== Bijvoorbeeld
+
+[source,php]
+----
+<?php
+if (($name === 'Jochem') && ($lastname === 'Kossen')) {
+  echo "Ja, jij bent Jochem Kossen.";
+}
+
+if ($mobile_is_valid || $phone_is_valid) {
+  echo "Bedankt voor uw telefoonnummer.";
+}
+----
+
+== Opdracht
+
+* Zoek uit: wat is het verschil tussen `||` en `xor`?
+* Zoek uit: wat doet de `+<=>+` operator?
+* Zoek uit: wat doet de `??` operator?
