@@ -36,3 +36,12 @@ $b = false;
 if ($a == $b) {
     echo "a is identiek aan b";
 }
+
+/**
+ * Opdracht 4
+ *
+ * Schrijf een functie 'spaceship' met twee argumenten die dezelfde waarden
+ * teruggeeft als de spaceship operator. Maar die operator mag je uiteraard
+ * niet gebruiken
+ */
+ 
