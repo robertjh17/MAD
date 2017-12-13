@@ -79,7 +79,11 @@ if ($mobile_is_valid || $phone_is_valid) {
 
 == Opdracht
 
-* Zoek uit: wat is het verschil tussen `||` en `xor`?
-* Zoek uit: wat doet de `+<=>+` operator?
-* Zoek uit: wat doet de `??` operator?
-* Los de challenge 'operators' op.
+Schrijf if statements met:
+
+* de `||` operator
+* de `xor` operator
+* de `+<=>+` operator
+* de `??` operator
+
+Los de challenge 'operators' op.
