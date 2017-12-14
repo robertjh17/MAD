@@ -1,0 +1,40 @@
+= SQL DATABASE verbinding maken in PHP storm
+Redmer Schoenmaker <rschoenmaker@student.landstede.nl>
+:source-highlighter: coderay
+:pdf-page-size: A4
+:toc: left
+:toclevels: 3
+:icons: font
+
+Je kunt via PHPStorm een verbinding maken met je database, maar WAAROM zou je dit willen doen?
+
+. Je hebt alles in 1 applicatie en hoeft niet elke keer naar je browser.
+. PHP storm maakt alle regels af zoals je dat gewend bent in php storm (handig als je niet de complete syntax van mysql kent!)
+. PHP storm geeft handige foutmeldingen :D
+. Je kunt in PHPStorm alles wat je in phpMyAdmin kan maar dan een stuk overzichtelijker
+
+== (WERKT ALLEEN ALS JE MET WIFI netwerk ICT-ZWOLLE BENT VERBONDEN)
+
+* Ga in PHPStorm naar het tabje `Database` (staat rechtsbovenin met een blauw icoontje)
+
+* Klik daar op het `+` teken, ga dan naar `datasource` en klik op `mysql`.
+
+vervolgens krijg je een menu tevoorschijn hierin mag je de volgende gegevens invullen
+
+* NAME: verzin iets leuks
+* HOST: 10.0.0.69
+* Database: jouw database naam bijvoorbeeld(rschoenm5555_l)
+* User: "jouw gebruikersnaam" (spreekt voor zich)
+* Password: "je wachtwoord" van phpMyAdmin (te vinden in newdeveloper notities!
+
+Klik op `test verbinding`!
+
+Werkt het niet dan mis je waarschijnlijk de drivers. Deze kun je downloaden en installeren door op het knopje `download drivers` te klikken die in het huidige tabblad staat
+
+Werkt het nu nog niet kom dan even naar Redmer of een van je docenten.
+
+Voor verdere vragen over hoe alles werkt met mysql in PHP storm kun je terecht bij Redmer of je docent.
+
+== Tot slot
+
+Voor vragen over een SQL dialect (wat je na enige tijd nodig zal hebben!) ga naar je docent of Redmer. Hint: we gebruiken MySQL.
