@@ -11,6 +11,7 @@ function getDb()
 
     return $dbh;
 }
+
 /*
  * create
  * read -> index en show
@@ -38,7 +39,6 @@ function create($game = null, $player = null, $score = null) {
         $sqlparams['score'] = $score;
     }
 
-
     print_r($sqlparams);
     $sth = $dbh->prepare($sql);
     $sth->execute($sqlparams);
@@ -64,12 +64,12 @@ function index($game = null, $player = null)
     $sql = 'SELECT * FROM highscores WHERE 1 = 1';
     $sqlparams = [];
 
-    if ($game !== null) {
+    if ($game !== null && !empty($game)) {
         $sql .= ' AND game = :game';
         $sqlparams['game'] = $game;
     }
 
-    if ($player !== null) {
+    if ($player !== null && !empty($game)) {
         $sql .= ' AND player = :player';
         $sqlparams['player'] = $player;
     }
@@ -82,12 +82,10 @@ function index($game = null, $player = null)
     return $rows;
 }
 
-$game = null;
+//$game = null;
 
+$game = $_GET['game'] ?? null;
 
-if (isset($_GET['game'])) {
-    $game = $_GET['game'];
-}
 
 $scores = index($game);
 
