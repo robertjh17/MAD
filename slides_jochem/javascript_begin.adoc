@@ -1,0 +1,96 @@
+= JavaScript: een begin
+:source-highlighter: coderay
+:revealjs_theme: serif
+:revealjs_history: true
+
+== Programmeertaal
+
+[%step]
+* variabelen
+* functies
+* net zo krachtig als PHP
+
+== Verschil met PHP
+
+[%step]
+* draait (meestal) in de browser
+
+[%notitle]
+== Overzicht
+
+image::img/client_webserver_dbserver.png[background,size=contain]
+
+== Meest gebruikt
+
+[source,javascript]
+----
+alert('hoi, ik laat een popup zien');
+----
+
+== Variabelen
+
+[source,php]
+----
+<?php
+// PHP:
+$age = 18;
+----
+
+[source,javascript]
+----
+// JavaScript:
+var age = 18;
+----
+
+== Functies
+
+[source,php]
+----
+<?php
+// PHP:
+function kwadraat($x) {
+  return $x * $x;
+}
+----
+
+[source,html]
+----
+<script>
+// JavaScript:
+function kwadraat(x) {
+  return x * x;
+}
+</script>
+----
+
+== Apart bestand
+
+[source,html]
+----
+<script src="js/main.js"></script>
+----
+
+== jQuery
+
+[source,javascript]
+----
+// "plain" JavaScript:
+document.getElementById('demo').innerHTML = 'Hello World';
+
+// JavaScript met jQuery:
+$('#demo').html('Hello World');
+----
+
+== Developer console
+
+[%step]
+* Gebruik hem!
+* Laat fouten zien
+* In je browser:
+  - Element inspecteren
+  - Selecteer tab 'Console'
+
+== Opdracht
+
+* Los de volgende challenge op:
+  - summer_hollidays_javascript.html

@@ -1,6 +1,7 @@
 = Les 012
 :source-highlighter: coderay
 :revealjs_theme: serif
+:revealjs_history: true
 
 [transition=zoom, %notitle]
 == Vandaag

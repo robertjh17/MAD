@@ -1,6 +1,7 @@
 = Checkboxes en Formulieren
 :source-highlighter: coderay
 :revealjs_theme: serif
+:revealjs_history: true
 
 == Vandaag
 

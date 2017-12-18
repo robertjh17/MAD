@@ -69,6 +69,11 @@
             loadScores();
         });
 
+        $('#btn_add_game').on('click', function (event) {
+            event.preventDefault();
+            addGame();
+        });
+
         loadScores();
     });
 
@@ -90,6 +95,10 @@
                 $('#highscores').append(html);
             }
         });
+    }
+
+    function addGame() {
+        alert('Ja, gelukt!');
     }
 
 </script>

@@ -45,3 +45,64 @@ if ($a == $b) {
  * niet gebruiken
  */
  
+
+
+$a = 4;
+$b = 4;
+
+$naam = "Jochem";
+$achternaam = "Kossen";
+
+if ($a === $b || $naam === "Jochem") {
+    echo "ja";
+} else {
+    echo "nee";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
