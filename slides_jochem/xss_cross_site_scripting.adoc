@@ -1,6 +1,7 @@
 = XSS / Cross Site Scripting
 :source-highlighter: coderay
 :revealjs_theme: serif
+:revealjs_history: true
 
 [transition=zoom, %notitle]
 == Doelen
