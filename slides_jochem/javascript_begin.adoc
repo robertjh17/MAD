@@ -94,3 +94,5 @@ $('#demo').html('Hello World');
 
 * Los de volgende challenge op:
   - summer_hollidays_javascript.html
+
+* JavaScript tutorial: https://www.w3schools.com/js/
