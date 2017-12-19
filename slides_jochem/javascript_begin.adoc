@@ -96,6 +96,12 @@ function kwadraat(x) {
 
 == jQuery
 
+[%step]
+* Een JavaScript "library"
+* Maakt veel JavaScript functionaliteit makkelijker
+
+== jQuery voorbeeld
+
 [source,javascript]
 ----
 // "plain" JavaScript:
@@ -119,5 +125,7 @@ $('#demo').html('Hello World');
 
 * Los de volgende challenge op:
   - summer_hollidays_javascript.html
-
-* JavaScript tutorial: https://www.w3schools.com/js/
+* JavaScript tutorial:
+  https://www.w3schools.com/js/
+* jQuery:
+  https://jquery.com
