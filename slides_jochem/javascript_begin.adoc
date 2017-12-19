@@ -3,6 +3,13 @@
 :revealjs_theme: serif
 :revealjs_history: true
 
+== Doel
+
+* Je weet hoe je JavaScript aanroept
+* Je kent de verschillen in syntax tussen PHP en JavaScript
+* Je ziet de overeenkomsten tussen PHP en JavaScript
+* Je kunt JavaScript code (deels) lezen en begrijpen
+
 == Programmeertaal
 
 [%step]
