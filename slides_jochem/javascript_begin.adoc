@@ -42,6 +42,23 @@ $age = 18;
 var age = 18;
 ----
 
+== Strings plakken
+
+[source,php]
+----
+<?php
+// PHP:
+$days = 214;
+$msg = 'Nog ' . $days . ' dagen tot de zomervakantie';
+----
+
+[source,javascript]
+----
+// JavaScript:
+var days = 214;
+var msg = 'Nog ' + days + ' dagen tot de zomervakantie';
+----
+
 == Functies
 
 [source,php]
@@ -89,6 +106,7 @@ $('#demo').html('Hello World');
 * In je browser:
   - Element inspecteren
   - Selecteer tab 'Console'
+  - console.log('jouw bericht');
 
 == Opdracht
 
