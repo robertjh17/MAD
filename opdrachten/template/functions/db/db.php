@@ -8,7 +8,7 @@
 
 function getDBConnection(){
     $config = parse_ini_file(__DIR__ . '/../../config.ini');
-    return new PDO('mysql:dbname=data;host=127.0.0.1;port=8889;',$config['user'],$config['pass']);
+    return new PDO('mysql:dbname='.$config['db'].';host='.$config['host'].';',$config['user'],$config['pass']);
 
 }
 
