@@ -4,3 +4,4 @@
  * Hiermee open je het nieuwe games scherm zie edit.php
  */
 ?>
+<a href="?page=films&function=edit&id=0">Nieuw!</a>

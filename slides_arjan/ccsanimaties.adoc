@@ -1,0 +1,60 @@
+# CSS Animations
+Arjan Timmerman<artimmerman@landstede.nl>
+:source-highlighter: coderay
+:pdf-page-size: A4
+:revealjs_theme: serif
+:setanchors: true
+:revealjs_history: true
+:imagedir: ./image
+
+[transition=zoom]
+## Doelen vorige les
+- Student kan een flexbox toepassen
+
+## Doelen les
+- Student kan benoemen wat een animatie is
+- Student kan een CSS animatie maken
+
+## CSS animatie ?
+Wat weten jullie ?
+
+## CSS animatie programmeren
+Veel wiskunde nodig.
+Gelukkig is er http://cssanimate.com
+Hou ze kort, niemand wil wachten!
+
+## Bestand
+Plaats animaties het liefst apart
+Gezien het veel css code zal zijn
+
+## Code!
+[source,css]
+----
+.animation{
+    /* animation geeft aan welke keyframes */
+    animation: animationFrames linear 1s;
+    animation-iteration-count: infinite;
+    /* waar moeten de transforms starten*/
+    transform-origin: 50% 50%;
+}
+----
+
+## Code 2!
+[source,css]
+----
+@keyframes animationFrames{
+    0% {
+        transform:  scaleX(1.00) scaleY(1.00) ;
+    }
+    50% {
+        transform:  scaleX(1.10) scaleY(1.10) ;
+    }
+    100% {
+        transform:  scaleX(1.00) scaleY(1.00) ;
+    }
+}
+----
+## opdracht
+Bedenk zelf een animatie en implementeer deze.
+
+

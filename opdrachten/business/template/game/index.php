@@ -9,8 +9,12 @@
  * ?page=game&function=delete&id=$data['id']
  *
  */
-var_dump($data);
+
 ?>
+<section>
+    <p>
+    <?=$data['name'];?><br>
+        <input type="text" value="micheal<?=$data['price'];?>">
+    </p>
 
-<?=$data['name'];?>
-
+</section>
