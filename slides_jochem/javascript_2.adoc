@@ -1,0 +1,28 @@
+= JavaScript: een klein stukje verder
+:source-highlighter: coderay
+:revealjs_theme: serif
+:revealjs_history: true
+
+== Doel
+
+* Je weet hoe je JavaScript in een extern bestand zet
+* Je weet hoe je functies met argumenten aanroept
+
+== Voorbeeldje
+
+[source,html]
+----
+<script src="js/calculator.js"></script>
+----
+
+== Aan het werk
+
+* Kopieer je oplossing voor `summer_hollidays_javascript.html` naar `deadline_blog.html`.
+* Verplaats de JavaScript code naar een bestand `until_date.js`
+* Gebruik `until_date.js` in `summer_hollidays_javascript.html` en `deadline_blog.html`
+* Gebruik een functie met parameter (de doeldatum) om de datum te berekenen
+
+== En wat je natuurlijk al begreep ...
+
+* `deadline_blog.html` laat de tijd zien die er nog is voordat je blog af moet zijn
+* `summer_hollidays_javascript.html` blijft gewoon werken
