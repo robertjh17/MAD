@@ -1,6 +1,6 @@
 
 <section>
-    <form action="<?=$action;?>" method="post">
+    <form action="<?=$action;?>" >
         Naam: <input type="text" value="<?=$data['name']?>">
         Genre: <input type="text" value="<?=$data['genre']?>">
         Price: <input type="text" value="<?=$data['price']?>">

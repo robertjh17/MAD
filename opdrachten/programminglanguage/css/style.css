@@ -1,0 +1,83 @@
+/**
+ RESET
+ */
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("../img/bg.jpg");
+}
+/*
+Geen kleuren voor linkjes waar al op geklikt is
+*/
+a, a:visited{
+    text-decoration: none;
+    color: inherit;
+}
+/**
+setup van flex box
+ */
+nav,main,footer{
+    display: flex;
+    color: #F5FFF7;
+}
+main,footer{
+    justify-content: center;
+    flex-wrap: wrap;
+}
+nav,footer,section{
+    background-color: rgba(233,131,0,0.9);
+}
+
+/*
+    Menu , zet menu items aan het begin
+ */
+nav{
+    justify-content: flex-start;
+}
+nav > a{
+    padding: 0.4em;
+    font: 1.5em bold;
+}
+nav > a:hover{
+    background-color: rgba(233,131,0,0.7);
+}
+/**
+Blokjes allemaal in het midden geschaald op breedte
+ */
+main > section{
+    margin: 1em;
+    padding: 1em;
+    width: 30em;
+}
+/**
+img naast de tekst, met een rand er omheen
+ */
+main > section > img {
+    width: 3em;
+    float: left ;
+    padding: 0.5em;
+}
+/**
+Soms wel 100% breedte
+ */
+main > section.fullwidth{
+    width:100%;
+}
+/**
+Footer onderaan met 100 width
+ */
+footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    padding: 1em;
+}
+
+
+
