@@ -314,7 +314,7 @@ print_r($_GET);
 [source,php]
 ----
 <?php
-$age = 17
+$age = 17;
 
 /* complexe "dump" van variabele om type en inhoud te zien */
 var_dump($age);
