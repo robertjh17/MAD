@@ -4,6 +4,8 @@ Author: Jochem Kossen <jkossen@landstede.nl>
 
 **Belangrijk** Dit document bevat notities met betrekking tot datgene dat je geleerd hebt. Beschouw het niet als volledig; dat is het niet.
 
+[[_TOC_]]
+
 ## GIT
 
 ### Bookmarks
