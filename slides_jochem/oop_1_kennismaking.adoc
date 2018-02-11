@@ -1,0 +1,82 @@
+= Objectgeoriënteerd Programmeren: een kennismaking
+:source-highlighter: coderay
+:revealjs_theme: serif
+:revealjs_history: true
+
+== Lesdoelen
+* Je weet wat classes en objecten zijn
+* Je kunt zelf een simpele class schrijven
+
+== Tot nu toe
+
+[%step]
+* variabelen
+* datatypen (String, Integer, Array, ...)
+* (foreach, for, while) loops
+* functies
+
+== Procedureel programmeren
+
+[%step]
+* Code wordt van boven naar beneden uitgevoerd
+* Simpel
+* Kun je alles mee maken
+
+== Laten we een autorace game gaan maken.
+
+[source,php]
+----
+<?php
+$car_1 = 'Ford Mustang GT';
+$pos_car_1 = 0;
+$finish = 25;
+
+while ($pos_car_1 != $finish) {
+  $pos_car_1++;
+}
+
+echo $car_1 . " made it!";
+----
+
+== Stel je voor dat je dat ook zo kunt schrijven:
+
+[source,php]
+----
+<?php
+$start = 0;
+$finish = 25;
+
+$car1 = new Car();
+$car1->setName('Ford Mustang');
+$car1->driveTo($finish);
+----
+
+[%notitle]
+== Ford Mustang GT
+image::img/mustang_gt.jpg[background]
+
+== En ...
+
+[source,php]
+----
+<?php
+$start = 0;
+$finish = 25;
+
+$car1 = new Car();
+$car1->setName('Ford Mustang GT');
+$car1->driveTo($finish);
+
+$car2 = new Car();
+$car2->setName('Aston Martin DB11');
+$car2->driveTo($finish);
+
+----
+
+== Maar hoe dan?
+
+Zie de code in de map `example_code/OOP/les1`
+
+== Opdracht
+
+Zie `leesvoer/oop_les1.adoc`

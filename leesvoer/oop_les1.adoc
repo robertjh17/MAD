@@ -1,0 +1,70 @@
+= Object Oriented Programming (OOP)
+
+== Doel
+* Je weet wat classes en objecten zijn
+* Je kunt zelf een simpele class schrijven
+
+== Voorkennis
+Jullie kennen inmiddels de basis van programmeren. Variabelen, `if-else` statements, (`for`, `foreach`, `while`) loops en functies.
+
+De manier waarop jullie programmeren noemen we **procedureel**. Op deze manier programmeren werkt prima totdat programma's groter of complexer worden.
+
+== Complex
+Om grotere programma's te maken, of ingewikkelder problemen op te lossen wordt vaak gewerkt met **objectgeoriënteerd** programmeren.
+
+Met objectgeoriënteerd programmeren (Object Oriented Programming / OOP) streven we ernaar over code te denken zoals we over de "echte wereld" denken. Dit doen we met behulp van **classes**.
+
+Een class is een **blauwdruk** van een **object**. Het beschrijft **eigenschappen** en **functionaliteit** die de eigenschappen van het object kunnen aanpassen of teruggeven.
+
+Eigenschappen worden uitgedrukt in *variabelen* die we *attributes* noemen.
+
+Functionaliteit wordt uitgedrukt in *functions* (ook wel *methods* genoemd)
+
+== Een voorbeeld
+
+Echte wereld: Een auto rijdt vooruit
+
+Laten we dit gaan nabouwen in code:
+
+[source,php]
+----
+<?php
+
+// Een definitie voor een auto
+class Car
+{
+    protected $pos = 0;
+
+    public function moveForward()
+    {
+        $this->pos++;
+    }
+
+    public function getPosition()
+    {
+        return $this->pos;
+    }
+}
+
+// uit één class kun je meerdere *objecten* maken
+$auto1 = new Car();
+$auto1->moveForward();
+echo $auto1->getPosition();
+----
+
+== Opdracht
+
+* Bekijk https://www.youtube.com/watch?v=sB_nEtZxPog
+* Probeer een class te schrijven met eigenschappen die de raket beschrijven
+  - Heeft  de raket een kleur?
+  - Heeft de raket een naam?
+  - Wat gebeurt er allemaal met de raket?
+* Bedenk goed dat eigenschappen geen waarden *zijn* maar waarden *bevatten*
+* Lukt dit? Lukt het ook om functies te schrijven die de eigenschappen aanpassen?
+* Kun je een object van je class maken en de functies uitvoeren?
+
+== Nog meer leesvoer?
+
+* https://secure.php.net/manual/en/language.oop5.php
+
+* https://www.codementor.io/learn-programming/comparing-programming-paradigms-procedural-programming-vs-object-oriented-programming
