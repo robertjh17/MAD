@@ -1,13 +1,14 @@
 = Object Oriented Programming (OOP)
 
 == Doel
+* Je weet in basis wat Object Oriented Programming is
 * Je weet wat classes en objecten zijn
 * Je kunt zelf een simpele class schrijven
 
 == Voorkennis
 Jullie kennen inmiddels de basis van programmeren. Variabelen, `if-else` statements, (`for`, `foreach`, `while`) loops en functies.
 
-De manier waarop jullie programmeren noemen we **procedureel**. Op deze manier programmeren werkt prima totdat programma's groter of complexer worden.
+De manier waarop jullie programmeren noemen we **procedural programming**. Op deze manier programmeren werkt prima totdat programma's groter of complexer worden.
 
 == Complex
 Om grotere programma's te maken, of ingewikkelder problemen op te lossen wordt vaak gewerkt met **objectgeoriënteerd** programmeren.
@@ -16,7 +17,7 @@ Met objectgeoriënteerd programmeren (Object Oriented Programming / OOP) streven
 
 Een class is een **blauwdruk** van een **object**. Het beschrijft **eigenschappen** en **functionaliteit** die de eigenschappen van het object kunnen aanpassen of teruggeven.
 
-Eigenschappen worden uitgedrukt in *variabelen* die we *attributes* noemen.
+Eigenschappen worden uitgedrukt in *variabelen* die we *attributes* of *properties* noemen.
 
 Functionaliteit wordt uitgedrukt in *functions* (ook wel *methods* genoemd)
 
@@ -33,13 +34,17 @@ Laten we dit gaan nabouwen in code:
 // Een definitie voor een auto
 class Car
 {
+    // eigenschappen / attributes / properties
     protected $pos = 0;
+    protected $
 
+    // method
     public function moveForward()
     {
         $this->pos++;
     }
 
+    // method
     public function getPosition()
     {
         return $this->pos;
@@ -47,10 +52,17 @@ class Car
 }
 
 // uit één class kun je meerdere *objecten* maken
-$auto1 = new Car();
-$auto1->moveForward();
-echo $auto1->getPosition();
+$car1 = new Car();
+$car1->moveForward();
+echo $car1->getPosition();
+
+$car2 = new Car();
+$car2->moveForward();
+$car2->moveForward();
+echo $car2->getPosition();
 ----
+
+Maak je nog even niet druk over de woorden `protected` en `public`. Die behandelen we later.
 
 == Opdracht
 
