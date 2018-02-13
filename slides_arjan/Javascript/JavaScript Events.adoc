@@ -1,0 +1,79 @@
+# JavaScript Events
+Arjan Timmerman<artimmerman@landstede.nl>
+:source-highlighter: coderay
+:pdf-page-size: A4
+:revealjs_theme: serif
+:setanchors: true
+:revealjs_history: true
+:imagedir: ./image
+
+[transition=zoom]
+## Ecmascript ?
+Javascript is een implementatie van ECMAScript.
+ECMA is een standaarden organisatie.
+
+## Variablen!
+[source,js]
+----
+var mystring = "aa";
+var myint = 99;
+var myfloat = 9.00;
+var myarray = []'
+var myobject = {}; // json object
+----
+
+## Functies!
+[source,js]
+----
+function start(event) {
+    console.log(event);
+}
+----
+
+## loggen!
+Net zo belangrijk!! Als var_dump en print_r in PHP
+
+[source,js]
+----
+    console.log(event);
+----
+
+## if/else!
+[source,js]
+----
+    if(a == b){
+        console.log('true');
+    }else{
+        console.log('false');
+
+    }
+----
+
+## Events
+All the events. Alles wat een gebruiker doet op een website, laden van een pagina, klikken, toetsen.
+Elke HTML element heeft eigen events. Deze kunnen we afluisteren.
+[source,js]
+----
+window.addEventListener('keydown', keypressed);
+
+function keyPressed(event){
+    var element = document.querySelector('#app');
+    alert('toets ingedrukt');
+}
+----
+
+## Demo
+
+## Opdracht
+
+Lees https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Overview_of_Events_and_Handlers
+Maak volgende opdracht voor morgen.
+
+Kies zelf een afbeelding en plaats deze op een HTML pagina.
+Voeg een event listener toe aan 'window', zorg dat de afbeelding kan bewegen aan de hand van WSAD of de pijltjes toetsen.
+Haal de positie op van het element met document.querySelector('selector').style.{left,top};
+
+Extra!
+Zorg dat de afbeelding niet uit het scherm kan bewegen.
+
+
