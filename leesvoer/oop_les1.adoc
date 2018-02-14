@@ -36,7 +36,7 @@ class Car
 {
     // eigenschappen / attributes / properties
     protected $pos = 0;
-    protected $
+    protected $name = '';
 
     // method
     public function moveForward()
