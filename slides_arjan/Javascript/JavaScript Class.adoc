@@ -1,0 +1,84 @@
+# JavaScript Events
+Arjan Timmerman<artimmerman@landstede.nl>
+:source-highlighter: coderay
+:pdf-page-size: A4
+:revealjs_theme: serif
+:setanchors: true
+:revealjs_history: true
+:imagedir: ./image
+
+[transition=zoom]
+
+## classes!
+export is voor ecmascript 6 modules
+[source,js]
+----
+export class Naam{
+
+}
+----
+
+## Functies!
+Let op geen function ervoor.
+[source,js]
+----
+export class Naam{
+
+    test(){
+
+    }
+}
+----
+
+## Constructor!
+Waneer een nieuw object wordt gemaakt wordt deze aan geroepen.
+[source,js]
+----
+export class Naam{
+
+    constructor(){
+
+    }
+}
+----
+
+## this
+
+Dit object!
+
+[source,js]
+----
+window.addEventListener('keydown', keypressed);
+
+export class Naam{
+
+    constructor(x){
+        this.x = x;
+    }
+}
+// this.x is nu 99
+new Naam(99);
+// this.x is nu 77
+new Naam(77);
+
+----
+
+## Import
+includes voor javascript. Daarvoor is export nodig.
+[source,js]
+----
+import {Pikachu} from "./pikachu.js";
+----
+
+## Demo
+
+## Opdracht
+Voor meer info: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+
+Maak volgende opdracht voor volgende les. Alles staat op git map opdrachten/JS_Classes
+Zorg dat pikachu ook naar links en rechts kan bewegen
+Speed!!! Zorg ervoor dat de snelheid van pikachu kan worden aangepast.
+Het Event "change" voor HTML element input#speed is al gekoppeld aan handleEvent van een pikachu,zie regel 16 van pikachu. js zie regel 8 hoe je de snelheid kunt zetten.
+
+Extra!!! Maak meerdere pikachu's die op verschillende snelheiden kunnen bewegen
+
